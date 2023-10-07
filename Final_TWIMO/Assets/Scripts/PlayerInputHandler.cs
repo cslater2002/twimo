@@ -30,8 +30,4 @@ public class PlayerMovementHandler : MonoBehaviour
         }
         movement.MoveRB(vel);
     }
-
-    void OnTriggerEnter2D(Collider2D other){
-        SceneManager.LoadScene("Outside");
-    }
 }
