@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FishRoom.unity
     guid: 53e67644aa0a046408fc8ba8e8b4822f
+  - enabled: 1
+    path: Assets/Scenes/Store.unity
+    guid: 1bae3730bfd253e41a2015f6d576ea03
   m_configObjects: {}
