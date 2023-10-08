@@ -5,13 +5,21 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     [SerializeField] string sceneName;
+    [SerializeField] GameObject test;
 
+    
     void OnTriggerEnter2D(Collider2D other){
+        if(sceneName == "Outside"){
+            test = GameObject.FindWithTag("PrevScene");
+            if(test != null){
+                test.GetComponent<SetLocation>().prevScene = SceneManager.GetActiveScene().name;
+            }
+            
+        }
         SceneManager.LoadScene(sceneName);
     }
 
     public void ChangeSceneOnClick(string sceneName){
-        Debug.Log("hi");
         SceneManager.LoadScene(sceneName);
     }
 }

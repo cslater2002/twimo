@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovementHandler : MonoBehaviour
 {
     [SerializeField] Movement movement;
+    [SerializeField] Canvas canvas;
     // Start is called before the first frame update
     void Awake()
     {
@@ -16,18 +17,20 @@ public class PlayerMovementHandler : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 vel = Vector3.zero;
-        if(Input.GetKey(KeyCode.A)){
-            vel.x = -1;
+        if(canvas.enabled == false){
+            if(Input.GetKey(KeyCode.A)){
+                vel.x = -1;
+            }
+            if(Input.GetKey(KeyCode.D)){
+                vel.x = 1;
+            }
+            if(Input.GetKey(KeyCode.W)){
+                vel.y = 1;
+            }
+            if(Input.GetKey(KeyCode.S)){
+                vel.y = -1;
+            }
+            movement.MoveRB(vel);
         }
-        if(Input.GetKey(KeyCode.D)){
-            vel.x = 1;
-        }
-        if(Input.GetKey(KeyCode.W)){
-            vel.y = 1;
-        }
-        if(Input.GetKey(KeyCode.S)){
-            vel.y = -1;
-        }
-        movement.MoveRB(vel);
     }
 }
