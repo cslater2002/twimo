@@ -6,9 +6,11 @@ public class PauseController : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
     [SerializeField] Canvas inventory;
-    void Awake(){
+    void Start(){
         canvas.enabled = false;
-        inventory.enabled = false;
+        if(inventory != null){
+            inventory.enabled = false;
+        }
     }
 
     // Update is called once per frame

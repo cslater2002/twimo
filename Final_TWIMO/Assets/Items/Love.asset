@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b2423742646754488af9d51cc666be, type: 3}
+  m_Name: Love
+  m_EditorClassIdentifier: 
+  itemName: Love
+  itemDesc: A heart with love in it
+  itemImage: {fileID: 21300000, guid: 01f1df4349c733b4fab6a7a41b3183c9, type: 3}
+  itemClass: gift
+  quantityOwned: 0

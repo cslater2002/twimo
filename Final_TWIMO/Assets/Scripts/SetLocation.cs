@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class SetLocation : MonoBehaviour
 {
-    [SerializeField] Transform location;
-    public string prevScene;
+    public Vector3 spawnLocation;
+    public string prevSceneName;
+    public static SetLocation singleton { get; set; }
 
-    void Start()
-    {
-        if(prevScene == "Store"){
-            location.position = new Vector3(-18.92f, -0.72f, 0);
+    void Awake(){
+        if(singleton == null){
+            singleton = this;
+            spawnLocation = Vector3.zero;
         }
         else{
-            
+            Destroy(this.gameObject);
         }
     }
 
