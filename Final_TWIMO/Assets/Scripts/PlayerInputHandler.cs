@@ -23,14 +23,6 @@ public class PlayerMovementHandler : MonoBehaviour
         else if(setLocation.prevLocationName == "Store" && SceneManager.GetActiveScene().name == "Outside"){
             transform.position = new Vector3(-18.92f, -0.72f, 0);
         }
-        // setLocation = SetLocation.singleton;
-        // Debug.Log("Player Handler" + setLocation.spawnLocation);
-        // if(SceneManager.GetActiveScene().name == "Outside" || SceneManager.GetActiveScene().name == "Bedroom"){
-        //     if(setLocation.spawnLocation != Vector3.zero){
-        //         transform.position = setLocation.spawnLocation;
-        //     }
-        // }
-        // setLocation.prevSceneName = SceneManager.GetActiveScene().name;
     }
     // Update is called once per frame
     void FixedUpdate()
