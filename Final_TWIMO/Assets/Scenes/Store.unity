@@ -1508,6 +1508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 0}
   canvas: {fileID: 195130110}
+  setLocation: {fileID: 11400000, guid: 5e2a24f7787c9984faac0d973dcf79e7, type: 2}
 --- !u!212 &896487345
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1794,6 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Outside
+  setLocation: {fileID: 11400000, guid: 5e2a24f7787c9984faac0d973dcf79e7, type: 2}
 --- !u!1 &1078950091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,7 +2108,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1146174602}
   - component: {fileID: 1146174601}
-  - component: {fileID: 1146174603}
   m_Layer: 0
   m_Name: PauseController
   m_TagString: Untagged
@@ -2143,20 +2144,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1146174603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146174600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abfd255a57afea14fbd165800dba1308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnLocation: {x: 0, y: 0, z: 0}
-  prevSceneName: 
 --- !u!1 &1237999577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,7 +2696,6 @@ GameObject:
   - component: {fileID: 1349058931}
   - component: {fileID: 1349058930}
   - component: {fileID: 1349058929}
-  - component: {fileID: 1349058933}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -2842,20 +2828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1349058933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349058928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abfd255a57afea14fbd165800dba1308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnLocation: {x: 0, y: 0, z: 0}
-  prevSceneName: 
 --- !u!1 &1577673782
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,6 +4181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Outside
+  setLocation: {fileID: 11400000, guid: 5e2a24f7787c9984faac0d973dcf79e7, type: 2}
 --- !u!1 &2121088115
 GameObject:
   m_ObjectHideFlags: 0

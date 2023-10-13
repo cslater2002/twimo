@@ -7,23 +7,30 @@ public class PlayerMovementHandler : MonoBehaviour
 {
     [SerializeField] Movement movement;
     [SerializeField] Canvas canvas;
-    SetLocation setLocation;
+    public SetLocation setLocation;
     // Start is called before the first frame update
     void Awake()
     { 
         if(SceneManager.GetActiveScene().name != "FishWorld"){
             movement = GetComponent<Movement>();
         }
-        setLocation = SetLocation.singleton;
     }
 
     void Start(){
-        if(SceneManager.GetActiveScene().name == "Outside" || SceneManager.GetActiveScene().name == "Bedroom"){
-            if(setLocation.spawnLocation != new Vector3(0,0,0)){
-                transform.position = setLocation.spawnLocation;
-            }
+        if (setLocation.prevLocationName == "FishWorld" && SceneManager.GetActiveScene().name == "Bedroom"){
+            transform.position = new Vector3(4.5f, -0.25f, 0);
         }
-        //transform.position = setLocation.spawnLocation;
+        else if(setLocation.prevLocationName == "Store" && SceneManager.GetActiveScene().name == "Outside"){
+            transform.position = new Vector3(-18.92f, -0.72f, 0);
+        }
+        // setLocation = SetLocation.singleton;
+        // Debug.Log("Player Handler" + setLocation.spawnLocation);
+        // if(SceneManager.GetActiveScene().name == "Outside" || SceneManager.GetActiveScene().name == "Bedroom"){
+        //     if(setLocation.spawnLocation != Vector3.zero){
+        //         transform.position = setLocation.spawnLocation;
+        //     }
+        // }
+        // setLocation.prevSceneName = SceneManager.GetActiveScene().name;
     }
     // Update is called once per frame
     void FixedUpdate()

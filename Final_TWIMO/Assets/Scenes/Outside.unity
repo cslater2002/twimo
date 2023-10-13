@@ -512,6 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Store
+  setLocation: {fileID: 11400000, guid: 5e2a24f7787c9984faac0d973dcf79e7, type: 2}
 --- !u!212 &344675012
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3452,6 +3453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 0}
   canvas: {fileID: 1650413948}
+  setLocation: {fileID: 11400000, guid: 5e2a24f7787c9984faac0d973dcf79e7, type: 2}
 --- !u!114 &831012289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4678,6 +4680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Bedroom
+  setLocation: {fileID: 11400000, guid: 5e2a24f7787c9984faac0d973dcf79e7, type: 2}
 --- !u!61 &1347025018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5336,6 +5339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Store
+  setLocation: {fileID: 11400000, guid: 5e2a24f7787c9984faac0d973dcf79e7, type: 2}
 --- !u!212 &1616467791
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5778,7 +5782,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1946864577}
   - component: {fileID: 1946864578}
-  - component: {fileID: 1946864579}
   m_Layer: 0
   m_Name: SpawnLocation
   m_TagString: PrevScene
@@ -5815,20 +5818,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1650413948}
   inventory: {fileID: 1431892925}
---- !u!114 &1946864579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946864575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abfd255a57afea14fbd165800dba1308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnLocation: {x: 0, y: 0, z: 0}
-  prevSceneName: 
 --- !u!1 &1987186352
 GameObject:
   m_ObjectHideFlags: 0
