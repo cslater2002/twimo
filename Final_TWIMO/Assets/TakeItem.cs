@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TakeItem : MonoBehaviour
 {
+    public static GameObject item;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,9 @@ public class TakeItem : MonoBehaviour
         
     }
     public void OnTriggerEnter2D(Collider2D other){
+        Debug.Log("hi");
         if(other.name == "Item(Clone)"){
-            Debug.Log("nom");
+            Debug.Log("Again hello");
         }
     }
 }

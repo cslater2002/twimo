@@ -1381,6 +1381,7 @@ MonoBehaviour:
   speed: 1
   fish: {fileID: 1968664071}
   item: {fileID: 0}
+  cam: {fileID: 2080639257}
   isWandering: 0
   goingLeft: 0
   goingRight: 0
@@ -2542,6 +2543,9 @@ MonoBehaviour:
   anim: {fileID: 1842059434}
   inventory: {fileID: 11400000, guid: 0b83ddadddd26ed48995e71501d8dcd0, type: 2}
   prefab: {fileID: 1491005822871640419, guid: 95b7716405713eb4bb38d3591db7b8fd, type: 3}
+  foodButton: {fileID: 446240338}
+  giftButton: {fileID: 585892195}
+  canvas: {fileID: 1997717096}
 --- !u!1 &976803575
 GameObject:
   m_ObjectHideFlags: 0
@@ -10711,7 +10715,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1968664077
 MonoBehaviour:
@@ -10827,6 +10831,8 @@ MonoBehaviour:
   item4: {fileID: 1434643829}
   item5: {fileID: 367424670}
   inventory: {fileID: 11400000, guid: 0b83ddadddd26ed48995e71501d8dcd0, type: 2}
+  slots: 5
+  buttonType: 0
 --- !u!1 &2012944634
 GameObject:
   m_ObjectHideFlags: 0

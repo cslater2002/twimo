@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] Transform target;
-    [SerializeField] float smoothSpeed = 0.0001f;
+    public Transform target;
+    public float smoothSpeed = 0.001f;
 
     void LateUpdate(){
         Follow();

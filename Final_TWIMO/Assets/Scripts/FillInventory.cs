@@ -11,9 +11,11 @@ public class FillInventory : MonoBehaviour
     [SerializeField] GameObject item5;
     
     public Inventory inventory;
-    int slots = 5;
+    [SerializeField] int slots = 5;
+    public int buttonType = 0;
 
     public void FillMiniFoodInventory(){
+        buttonType = 1;
         var items = new List<GameObject> {item1, item2, item3, item4, item5};
         for(int i = 0; i < items.Count; i++){
             items[i].GetComponent<SpriteRenderer>().sprite = null;
@@ -27,6 +29,7 @@ public class FillInventory : MonoBehaviour
         }
     }
     public void FillMiniGiftInventory(){
+        buttonType = 2;
         var items = new List<GameObject> {item1, item2, item3, item4, item5};
         for(int i = 0; i < items.Count; i++){
             items[i].GetComponent<SpriteRenderer>().sprite = null;

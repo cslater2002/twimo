@@ -7,6 +7,7 @@ public class Chase : MonoBehaviour
     [SerializeField] float speed = 1f;
     [SerializeField] GameObject fish;
     [SerializeField] Collider2D item;
+    [SerializeField] Camera cam;
     public bool isWandering = false;
     public bool goingLeft = false;
     public bool goingRight = false;
@@ -17,13 +18,24 @@ public class Chase : MonoBehaviour
 
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other){
-        item = other;
-        isCatching = true;
+        if(other.name != "Fish"){
+            item = other;
+            isCatching = true;
+            cam.GetComponent<CameraMovement>().target = item.gameObject.GetComponent<Transform>();
+            cam.GetComponent<CameraMovement>().smoothSpeed = 1;
+            //isCatching = true;
+        }
     }
 
     void Update()
     {
         if(isCatching){
+            if(item.IsTouching(fish.GetComponent<BoxCollider2D>())){
+                cam.GetComponent<CameraMovement>().target = fish.GetComponent<Transform>();
+                cam.GetComponent<CameraMovement>().smoothSpeed = .001f;
+                Destroy(item.gameObject);
+                isCatching = false;
+            }
              Vector3 direction = item.transform.position - fish.transform.position;
              direction = Vector3.Normalize(direction);
              if(direction.x < 0){
