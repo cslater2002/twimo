@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WanderAI : MonoBehaviour
+public class Chase : MonoBehaviour
 {
     [SerializeField] float speed = 1f;
-    [SerializeField] SpriteRenderer body;
-    [SerializeField] GameObject item;
+    [SerializeField] GameObject fish;
+    [SerializeField] Collider2D item;
     public bool isWandering = false;
     public bool goingLeft = false;
     public bool goingRight = false;
@@ -14,31 +14,41 @@ public class WanderAI : MonoBehaviour
     public bool goingRightDown = false;
     public bool isCatching = false;
 
+
     // Update is called once per frame
+    void OnTriggerEnter2D(Collider2D other){
+        item = other;
+        isCatching = true;
+    }
+
     void Update()
     {
-        Debug.Log(item.activeInHierarchy);
-        // if(Vector3.Distance(transform.position, item.transform.position) < 5){
-        //     isCatching = true;
-        //     Vector3 direction = item.position - transform.position;
-        //     direction = Vector3.Normalize(direction);
-        //     transform.position += direction;
-        // }
+        if(isCatching){
+             Vector3 direction = item.transform.position - fish.transform.position;
+             direction = Vector3.Normalize(direction);
+             if(direction.x < 0){
+                fish.GetComponent<SpriteRenderer>().flipX = false;
+             }
+             else{
+                fish.GetComponent<SpriteRenderer>().flipX = true;
+             }
+             fish.transform.position += direction;
+         }
         if(!isWandering && !isCatching){
             StartCoroutine(Wander());
         }
         else if(isWandering){
             if(goingLeft){
-            transform.position += new Vector3(-1,1,1) * Time.deltaTime;
+            fish.transform.position += new Vector3(-1,1,1) * Time.deltaTime;
             }
             if(goingRight){
-                transform.position += new Vector3(1,1,1) * Time.deltaTime;
+                fish.transform.position += new Vector3(1,1,1) * Time.deltaTime;
             }
             if(goingLeftDown){
-                transform.position += new Vector3(-1,-1,1) * Time.deltaTime;
+                fish.transform.position += new Vector3(-1,-1,1) * Time.deltaTime;
             }
             if(goingRightDown){
-                transform.position += new Vector3(1,-1,1) * Time.deltaTime;
+                fish.transform.position += new Vector3(1,-1,1) * Time.deltaTime;
             }
         }
 
@@ -48,11 +58,11 @@ public class WanderAI : MonoBehaviour
 
     IEnumerator Wander()
     {
-        isWandering = true;
+       isWandering = true;
        int yChange = Random.Range(1,3); //if 1 go up if 2 go down
        int leftChange = Random.Range(1,5);
        int rightChange = 5 - leftChange;
-        body.flipX = false;
+        fish.GetComponent<SpriteRenderer>().flipX = false;
         if(yChange == 1){
             goingLeft = true;
             yield return new WaitForSeconds(leftChange);
@@ -64,7 +74,7 @@ public class WanderAI : MonoBehaviour
             goingLeftDown = false;
         }
 
-        body.flipX = true;
+        fish.GetComponent<SpriteRenderer>().flipX = true;
         
         if(yChange == 1){
             goingRight = true;
@@ -80,3 +90,5 @@ public class WanderAI : MonoBehaviour
 
     }
 }
+
+
