@@ -22,7 +22,7 @@ public class FillInventory : MonoBehaviour
         }
         int invInc=0;
         for(int i = 0; i < slots; i++){
-            if(i < inventory.items.Count && string.Compare(inventory.items[i].itemClass, "food") == 0){
+            if(i < inventory.items.Count && string.Compare(inventory.items[i].itemClass, "food") == 0 && inventory.items[i].quantityOwned > 0){
                 items[i].GetComponent<SpriteRenderer>().sprite = inventory.items[i].itemImage; 
                 invInc++;
             }
@@ -37,7 +37,7 @@ public class FillInventory : MonoBehaviour
         int invInc=0;
         for(int i = 0; i < slots; i++){
             if(i < inventory.items.Count){
-                if(string.Compare(inventory.items[i].itemClass, "gift") == 0){
+                if(string.Compare(inventory.items[i].itemClass, "gift") == 0  && inventory.items[i].quantityOwned > 0){
                     items[invInc].GetComponent<SpriteRenderer>().sprite = inventory.items[i].itemImage; 
                     invInc++;
                 }

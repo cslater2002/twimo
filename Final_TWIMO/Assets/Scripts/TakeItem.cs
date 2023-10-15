@@ -4,22 +4,14 @@ using UnityEngine;
 
 public class TakeItem : MonoBehaviour
 {
-    public static GameObject item;
+    public FishStats stats;
+    public int index;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        index = stats.currentIndex;
+        GetComponent<SpriteRenderer>().sprite = stats.list[index].fishImage;           
     }
     public void OnTriggerEnter2D(Collider2D other){
-        Debug.Log("hi");
-        if(other.name == "Item(Clone)"){
-            Debug.Log("Again hello");
-        }
     }
 }

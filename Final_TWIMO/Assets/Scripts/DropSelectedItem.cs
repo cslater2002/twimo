@@ -10,48 +10,55 @@ public class DropSelectedItem : MonoBehaviour
     [SerializeField] Button foodButton;
     [SerializeField] Button giftButton;
     [SerializeField] Image canvas;
+    public FishStats stats;
+    public int index;
     // Start is called before the first frame update
     
     public void DropItem(){
+        index = stats.currentIndex;
         List<Item> list = new List<Item>();
         if(canvas.GetComponent<FillInventory>().buttonType == 1){
             foreach(Item item in inventory.items){
-                if(item.itemClass == "food"){
+                if(item.itemClass == "food" && item.quantityOwned > 0){
                     list.Add(item);
+                    stats.list[index].incrementHunger();
                 }
             }
         }
         else if(canvas.GetComponent<FillInventory>().buttonType == 2){
             foreach(Item item in inventory.items){
-                if(item.itemClass == "gift"){
+                if(item.itemClass == "gift" && item.quantityOwned > 0){
                     list.Add(item);
+                    stats.list[index].incrementHappiness();
                 }
             }
         }
         anim.Play("Close");
-        //disable buttons
         foodButton.enabled = false;
         giftButton.enabled = false;
 
         if((int) transform.localPosition.x == -757){
-            prefab.GetComponent<SpriteRenderer>().sprite = list[0].itemImage;
+                prefab.GetComponent<SpriteRenderer>().sprite = list[0].itemImage;
+                list[0].decrementQuantity();
         }
         else if((int) transform.localPosition.x == -406){
-            prefab.GetComponent<SpriteRenderer>().sprite = list[1].itemImage;
+                prefab.GetComponent<SpriteRenderer>().sprite = list[1].itemImage;
+                list[1].decrementQuantity();
         }
         else if((int) transform.localPosition.x == -55){
-            prefab.GetComponent<SpriteRenderer>().sprite = list[2].itemImage;
+                prefab.GetComponent<SpriteRenderer>().sprite = list[2].itemImage;
+                list[2].decrementQuantity();
         }
         else if((int) transform.localPosition.x == 295){
-            prefab.GetComponent<SpriteRenderer>().sprite = list[3].itemImage;
+                prefab.GetComponent<SpriteRenderer>().sprite = list[3].itemImage;
+                list[3].decrementQuantity();
         }
         else if((int) transform.localPosition.x == 646){
-            prefab.GetComponent<SpriteRenderer>().sprite = list[4].itemImage;
+                prefab.GetComponent<SpriteRenderer>().sprite = list[4].itemImage;
+                list[4].decrementQuantity();
         }
         Instantiate(prefab, new Vector3(prefab.GetComponent<Transform>().localPosition.x, prefab.GetComponent<Transform>().localPosition.y, prefab.GetComponent<Transform>().localPosition.z), Quaternion.identity);
         foodButton.enabled = true;
         giftButton.enabled = true;
-        //remove it from inventory
-        
     }
 }

@@ -2227,6 +2227,7 @@ GameObject:
   - component: {fileID: 1354263332}
   - component: {fileID: 1354263331}
   - component: {fileID: 1354263333}
+  - component: {fileID: 1354263334}
   m_Layer: 0
   m_Name: Transporter
   m_TagString: Untagged
@@ -2277,6 +2278,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 198605127}
   inventory: {fileID: 1794905614}
+--- !u!114 &1354263334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354263330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14eeddbdbeb4b294c8154c4c0bca8235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 64812ca5a81960246b59effc73dadf05, type: 2}
 --- !u!1 &1376706526
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,6 +2656,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1354263334}
+        m_TargetAssemblyTypeName: UpdateFish, Assembly-CSharp
+        m_MethodName: updateCurrentFish
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1354263331}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
         m_MethodName: ChangeSceneOnClick
@@ -2875,6 +2901,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1354263334}
+        m_TargetAssemblyTypeName: UpdateFish, Assembly-CSharp
+        m_MethodName: updateCurrentFish
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1354263331}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
         m_MethodName: ChangeSceneOnClick
