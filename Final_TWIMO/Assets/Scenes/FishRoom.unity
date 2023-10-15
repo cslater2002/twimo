@@ -230,6 +230,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 624372349}
   inventory: {fileID: 0}
+  moneyLabel: {fileID: 0}
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  item3: {fileID: 0}
+  playerInventory: {fileID: 0}
 --- !u!1 &120354820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,6 +2570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04325dcca78e9114fa687990faf8a0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upperBound: 300.9
+  lowerBound: -460
+  distance: 3.25
 --- !u!212 &941311497
 SpriteRenderer:
   m_ObjectHideFlags: 0

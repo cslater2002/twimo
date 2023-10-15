@@ -15,9 +15,11 @@ public class FillShop : MonoBehaviour
     void Start()
     {
         var list = new List<GameObject> {item1, item2, item3, item4, item5};
+        int shopIndex = 0;
         foreach(GameObject item in list){
-            item.GetComponent<SpriteRenderer>().sprite = inventory.items[0].itemImage; 
-            item.transform.GetChild(0).gameObject.GetComponent<Text>().text = "$" + inventory.items[0].itemCost;
+            item.GetComponent<SpriteRenderer>().sprite = inventory.shopSelection[shopIndex].itemImage; 
+            item.transform.GetChild(0).gameObject.GetComponent<Text>().text = "$" + inventory.shopSelection[shopIndex].itemCost;
+            shopIndex++;
         }
     }
 

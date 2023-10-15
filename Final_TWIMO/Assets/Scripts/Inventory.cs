@@ -10,6 +10,7 @@ public class Inventory : ScriptableObject
     public List<Item> items = new();
     public int maxItems = 5; 
     public int money;
+    public List<Item> shopSelection = new();
 
     public bool AddItem(Item itemToAdd)
     {
