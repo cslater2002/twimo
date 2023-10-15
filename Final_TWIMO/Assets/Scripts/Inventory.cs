@@ -6,30 +6,10 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class Inventory : ScriptableObject
 {
-    
     public List<Item> items = new();
+    public List<Item> shopSelection = new();
     public int maxItems = 5; 
     public int money;
-    public List<Item> shopSelection = new();
-
-    public bool AddItem(Item itemToAdd)
-    {
-        for (int i = 0; i < items.Count; i++)
-        {
-            if (items[i] == null)
-            {
-                items[i] = itemToAdd;
-                return true;
-            }
-        }
-        if (items.Count < maxItems)
-        {
-            items.Add(itemToAdd);
-            return true;
-        }
-        Debug.Log("No space in the inventory");
-        return false;
-    }
 }
 
 

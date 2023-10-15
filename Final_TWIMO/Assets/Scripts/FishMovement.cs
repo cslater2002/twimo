@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Chase : MonoBehaviour
 {
-    [SerializeField] float speed = 1f;
     [SerializeField] GameObject fish;
     [SerializeField] Collider2D item;
     [SerializeField] Camera cam;
@@ -16,14 +15,12 @@ public class Chase : MonoBehaviour
     public bool isCatching = false;
 
 
-    // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other){
         if(other.name != "Fish"){
             item = other;
             isCatching = true;
             cam.GetComponent<CameraMovement>().target = item.gameObject.GetComponent<Transform>();
             cam.GetComponent<CameraMovement>().smoothSpeed = 1;
-            //isCatching = true;
         }
     }
 
@@ -63,17 +60,14 @@ public class Chase : MonoBehaviour
                 fish.transform.position += new Vector3(1,-1,1) * Time.deltaTime;
             }
         }
-
-        
-        //if there is a wall change directions
     }
 
     IEnumerator Wander()
     {
-       isWandering = true;
-       int yChange = Random.Range(1,3); //if 1 go up if 2 go down
-       int leftChange = Random.Range(1,5);
-       int rightChange = 5 - leftChange;
+        isWandering = true;
+        int yChange = Random.Range(1,3); 
+        int leftChange = Random.Range(1,5);
+        int rightChange = 5 - leftChange;
         fish.GetComponent<SpriteRenderer>().flipX = false;
         if(yChange == 1){
             goingLeft = true;
@@ -85,9 +79,7 @@ public class Chase : MonoBehaviour
             yield return new WaitForSeconds(leftChange);
             goingLeftDown = false;
         }
-
         fish.GetComponent<SpriteRenderer>().flipX = true;
-        
         if(yChange == 1){
             goingRight = true;
             yield return new WaitForSeconds(rightChange);
@@ -99,7 +91,6 @@ public class Chase : MonoBehaviour
             goingRightDown = false;
         }
         isWandering = false;
-
     }
 }
 

@@ -7,10 +7,10 @@ public class FishData : ScriptableObject{
     [TextArea]
     public string fishName;
     public Sprite fishImage;
-    //add color
-    //public int level;
     public int happiness;
     public int hunger;
+    //public Color color
+    //public int level;
     //public int health;
 
     public void incrementHunger(){

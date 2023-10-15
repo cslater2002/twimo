@@ -8,13 +8,6 @@ public class PlayerMovementHandler : MonoBehaviour
     [SerializeField] Movement movement;
     [SerializeField] Canvas canvas;
     public SetLocation setLocation;
-    // Start is called before the first frame update
-    void Awake()
-    { 
-        if(SceneManager.GetActiveScene().name != "FishWorld"){
-            movement = GetComponent<Movement>();
-        }
-    }
 
     void Start(){
         if (setLocation.prevLocationName == "FishWorld" && SceneManager.GetActiveScene().name == "Bedroom"){
@@ -24,11 +17,11 @@ public class PlayerMovementHandler : MonoBehaviour
             transform.position = new Vector3(-18.92f, -0.72f, 0);
         }
     }
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         Vector3 vel = Vector3.zero;
-        if(canvas.enabled == false && SceneManager.GetActiveScene().name != "FishWorld"){
+        if(canvas.enabled == false && SceneManager.GetActiveScene().name != "FishWorld" && SceneManager.GetActiveScene().name != "FishRoom"){
             if(Input.GetKey(KeyCode.A)){
                 vel.x = -1;
             }

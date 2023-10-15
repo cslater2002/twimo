@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Sleep : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     [SerializeField] Image overlay;
-    public bool sleeping = false;
-    public FishStats stats;
-    public int moneyEarned = 0;
-    public Inventory inventory;
     [SerializeField] Transform character;
+    [SerializeField] bool sleeping = false;
+    [SerializeField] int moneyEarned = 0;
+    public FishStats stats;
+    public Inventory inventory;
 
     public void OnTriggerEnter2D(Collider2D other){
         sleeping = true;

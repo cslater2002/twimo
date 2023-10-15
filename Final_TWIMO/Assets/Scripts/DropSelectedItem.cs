@@ -5,14 +5,13 @@ using UnityEngine.UI;
 public class DropSelectedItem : MonoBehaviour
 {
     [SerializeField] Animator anim;
-    public Inventory inventory;
     [SerializeField] GameObject prefab;
     [SerializeField] Button foodButton;
     [SerializeField] Button giftButton;
     [SerializeField] Image canvas;
+    public Inventory inventory;
     public FishStats stats;
     public int index;
-    // Start is called before the first frame update
     
     public void DropItem(){
         index = stats.currentIndex;

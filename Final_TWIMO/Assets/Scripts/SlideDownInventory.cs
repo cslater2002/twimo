@@ -5,10 +5,6 @@ using UnityEngine;
 public class SlideDownInventory : MonoBehaviour
 {
     [SerializeField] Animator anim;
-    void Awake()
-    {
-        anim = GetComponent<Animator>();
-    }
 
     public void SlideInventoryDown(){
         anim.Play("Open");

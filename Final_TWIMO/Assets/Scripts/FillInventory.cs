@@ -9,9 +9,8 @@ public class FillInventory : MonoBehaviour
     [SerializeField] GameObject item3;
     [SerializeField] GameObject item4;
     [SerializeField] GameObject item5;
-    
-    public Inventory inventory;
     [SerializeField] int slots = 5;
+    public Inventory inventory;
     public int buttonType = 0;
 
     public void FillMiniFoodInventory(){
@@ -20,7 +19,7 @@ public class FillInventory : MonoBehaviour
         for(int i = 0; i < items.Count; i++){
             items[i].GetComponent<SpriteRenderer>().sprite = null;
         }
-        int invInc=0;
+        int invInc = 0;
         for(int i = 0; i < slots; i++){
             if(i < inventory.items.Count && string.Compare(inventory.items[i].itemClass, "food") == 0 && inventory.items[i].quantityOwned > 0){
                 items[invInc].GetComponent<SpriteRenderer>().sprite = inventory.items[i].itemImage; 
@@ -34,7 +33,7 @@ public class FillInventory : MonoBehaviour
         for(int i = 0; i < items.Count; i++){
             items[i].GetComponent<SpriteRenderer>().sprite = null;
         }
-        int invInc=0;
+        int invInc = 0;
         for(int i = 0; i < slots; i++){
             if(i < inventory.items.Count){
                 if(string.Compare(inventory.items[i].itemClass, "gift") == 0  && inventory.items[i].quantityOwned > 0){

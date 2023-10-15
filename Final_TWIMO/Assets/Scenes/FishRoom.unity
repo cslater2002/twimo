@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 70292595}
   - component: {fileID: 70292594}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: FishRoom Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 153359490}
   - component: {fileID: 153359489}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Box4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 188476538}
   - component: {fileID: 188476537}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -613,13 +613,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf93839037b2d419da5d5c5e09ece9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 64812ca5a81960246b59effc73dadf05, type: 2}
   happyLevel: {fileID: 2033302343}
   hungerLevel: {fileID: 604476545}
   step: 64
   height: 81
   nameLabel: {fileID: 321753979}
   fishPreview: {fileID: 1859315777}
+  stats: {fileID: 11400000, guid: 64812ca5a81960246b59effc73dadf05, type: 2}
   index: 0
 --- !u!1 &298662039
 GameObject:
@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 356062085}
   - component: {fileID: 356062084}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Box3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 463597786}
   - component: {fileID: 463597789}
   m_Layer: 5
-  m_Name: Square
+  m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1404,7 +1404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6c25d207a4d754987c54f5addcccda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
   fish: {fileID: 1968664071}
   item: {fileID: 0}
   cam: {fileID: 2080639257}
@@ -2125,7 +2124,7 @@ GameObject:
   - component: {fileID: 695692160}
   - component: {fileID: 695692159}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Dialogue Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2657,11 +2656,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1842059434}
-  inventory: {fileID: 11400000, guid: 0b83ddadddd26ed48995e71501d8dcd0, type: 2}
   prefab: {fileID: 1491005822871640419, guid: 95b7716405713eb4bb38d3591db7b8fd, type: 3}
   foodButton: {fileID: 446240338}
   giftButton: {fileID: 585892195}
   canvas: {fileID: 1997717096}
+  inventory: {fileID: 11400000, guid: 0b83ddadddd26ed48995e71501d8dcd0, type: 2}
   stats: {fileID: 11400000, guid: 64812ca5a81960246b59effc73dadf05, type: 2}
   index: 0
 --- !u!1 &976803575
@@ -9830,7 +9829,7 @@ GameObject:
   - component: {fileID: 1559400474}
   - component: {fileID: 1559400473}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Heading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10042,7 +10041,7 @@ GameObject:
   - component: {fileID: 1581043253}
   - component: {fileID: 1581043252}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Box1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10351,7 +10350,7 @@ GameObject:
   - component: {fileID: 1842059435}
   - component: {fileID: 1842059434}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10480,7 +10479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31071ddcf2bfff145a602d3ef7c38191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 1842059434}
 --- !u!1 &1859315775
 GameObject:
   m_ObjectHideFlags: 0
@@ -10569,7 +10568,7 @@ GameObject:
   - component: {fileID: 1898914855}
   - component: {fileID: 1898914857}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Box2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10952,8 +10951,8 @@ MonoBehaviour:
   item3: {fileID: 1081365018}
   item4: {fileID: 1434643829}
   item5: {fileID: 367424670}
-  inventory: {fileID: 11400000, guid: 0b83ddadddd26ed48995e71501d8dcd0, type: 2}
   slots: 5
+  inventory: {fileID: 11400000, guid: 0b83ddadddd26ed48995e71501d8dcd0, type: 2}
   buttonType: 0
 --- !u!1 &2012944634
 GameObject:
@@ -10967,7 +10966,7 @@ GameObject:
   - component: {fileID: 2012944637}
   - component: {fileID: 2012944636}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Box5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

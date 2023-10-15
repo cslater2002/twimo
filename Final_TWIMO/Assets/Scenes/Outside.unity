@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 54751108}
   - component: {fileID: 54751107}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 143843602}
   - component: {fileID: 143843601}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 162759901}
   - component: {fileID: 162759902}
   m_Layer: 0
-  m_Name: New Piskel (6)
+  m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 344675011}
   - component: {fileID: 344675010}
   m_Layer: 0
-  m_Name: Door (1)
+  m_Name: Left Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3622,7 +3622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f07358b31b0104fb30bd44382ee8cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 0}
+  movement: {fileID: 831012289}
   canvas: {fileID: 1650413948}
   setLocation: {fileID: 11400000, guid: 5e2a24f7787c9984faac0d973dcf79e7, type: 2}
 --- !u!114 &831012289
@@ -3637,7 +3637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0327f3d7afac74fb2cf943e3c5f603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 831012286}
   speed: 3
 --- !u!212 &831012290
 SpriteRenderer:
@@ -3763,7 +3763,7 @@ GameObject:
   - component: {fileID: 878905125}
   - component: {fileID: 878905124}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Dialogue Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4407,7 +4407,7 @@ GameObject:
   - component: {fileID: 1182001995}
   - component: {fileID: 1182001996}
   m_Layer: 0
-  m_Name: New Piskel (5)
+  m_Name: Stair4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4643,7 +4643,7 @@ GameObject:
   - component: {fileID: 1316328362}
   - component: {fileID: 1316328363}
   m_Layer: 0
-  m_Name: New Piskel (7)
+  m_Name: Stair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5201,7 +5201,7 @@ GameObject:
   - component: {fileID: 1373658028}
   - component: {fileID: 1373658029}
   m_Layer: 0
-  m_Name: New Piskel (8)
+  m_Name: Stair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5404,7 +5404,7 @@ GameObject:
   - component: {fileID: 1512435483}
   - component: {fileID: 1512435482}
   m_Layer: 5
-  m_Name: Inventory
+  m_Name: Player Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5506,7 +5506,7 @@ GameObject:
   - component: {fileID: 1521817423}
   - component: {fileID: 1521817422}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Heading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5586,7 +5586,7 @@ GameObject:
   - component: {fileID: 1616467790}
   - component: {fileID: 1616467789}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Right Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5836,7 +5836,7 @@ GameObject:
   - component: {fileID: 1674891090}
   - component: {fileID: 1674891089}
   m_Layer: 5
-  m_Name: InvGrid
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5911,7 +5911,7 @@ GameObject:
   - component: {fileID: 1726613912}
   - component: {fileID: 1726613911}
   m_Layer: 5
-  m_Name: MoneyAmt
+  m_Name: Money Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5990,7 +5990,7 @@ GameObject:
   - component: {fileID: 1780750651}
   - component: {fileID: 1780750650}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6064,7 +6064,7 @@ GameObject:
   - component: {fileID: 1852564446}
   - component: {fileID: 1852564445}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Outside Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6165,7 +6165,7 @@ GameObject:
   - component: {fileID: 1987186355}
   - component: {fileID: 1987186354}
   m_Layer: 0
-  m_Name: Doors
+  m_Name: Fake doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

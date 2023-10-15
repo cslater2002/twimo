@@ -5,6 +5,5 @@ using UnityEngine;
 
 [CreateAssetMenu]
 public class SetLocation : ScriptableObject{
-    [TextArea]
     public string prevLocationName;
 }

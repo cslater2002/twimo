@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class FillStats : MonoBehaviour
 {
-    public FishStats stats;
     [SerializeField] Image happyLevel;
     [SerializeField] Image hungerLevel;
     [SerializeField] int step = 64;
     [SerializeField] int height = 81;
     [SerializeField] Text nameLabel;
     [SerializeField] Image fishPreview;
+    public FishStats stats;
     public int index;
 
     public void fillStatsMenu(){
