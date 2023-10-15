@@ -11,6 +11,7 @@ public class Item : ScriptableObject{
     public Sprite itemImage;
     public string itemClass;
     public int quantityOwned;
+    public int itemCost;
 
     public void incrementQuantity(){
          this.quantityOwned = this.quantityOwned + 1;
