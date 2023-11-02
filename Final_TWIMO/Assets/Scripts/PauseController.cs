@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 public class PauseController : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
@@ -13,14 +14,19 @@ public class PauseController : MonoBehaviour
     [SerializeField] GameObject item3;
     [SerializeField] Image optionsMenu;
     [SerializeField] Slider musicSlider;
+    [SerializeField] Slider sfxSlider;
+    [SerializeField] Slider ambienceSlider;
+    [SerializeField] AudioMixer mixer;
     public Inventory playerInventory;
 
     void Start(){
+        //musicSlider.value = 
         canvas.enabled = false;
         optionsMenu.gameObject.SetActive(false);
         if(inventory != null){        
             inventory.enabled = false;
         }
+
     }
 
     void Update()
@@ -72,13 +78,13 @@ public class PauseController : MonoBehaviour
 
     public void SliderOnValueChanged(string slider){
         if(slider == "music"){
-            //musicSlider.value;
+            mixer.SetFloat("Music", Mathf.Log10(musicSlider.value) * 20);
         }
         if(slider == "sfx"){
-
+            mixer.SetFloat("SFX", Mathf.Log10(sfxSlider.value) * 20);
         }
         if(slider == "ambient"){
-
+            mixer.SetFloat("Ambient", Mathf.Log10(ambienceSlider.value) * 20);
         }
 
     }

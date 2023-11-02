@@ -2280,10 +2280,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1964347075}
   m_HandleRect: {fileID: 430160829}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 0
+  m_MinValue: 0.0001
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4726,6 +4726,9 @@ MonoBehaviour:
   item3: {fileID: 1828035015}
   optionsMenu: {fileID: 1644961206}
   musicSlider: {fileID: 2033251860}
+  sfxSlider: {fileID: 441576698}
+  ambienceSlider: {fileID: 1727059389}
+  mixer: {fileID: 24100000, guid: 77f22b1ec0886794186ea3ad1d5b3e41, type: 2}
   playerInventory: {fileID: 11400000, guid: 0b83ddadddd26ed48995e71501d8dcd0, type: 2}
 --- !u!4 &1380689325
 Transform:
@@ -5465,10 +5468,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 375645653}
   m_HandleRect: {fileID: 1139475183}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 0
+  m_MinValue: 0.0001
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -6507,16 +6510,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 1208221612}
   m_HandleRect: {fileID: 1865728501}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 0
+  m_MinValue: 0.0001
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1380689324}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: StopCoroutine
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
+        m_MethodName: SliderOnValueChanged
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
