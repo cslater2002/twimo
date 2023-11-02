@@ -13,6 +13,8 @@ public class FishData : ScriptableObject{
     //public int level;
     //public int health;
 
+    private void OnEnable() => hideFlags = HideFlags.DontUnloadUnusedAsset;
+
     public void incrementHunger(){
         if(this.hunger < 10){
             this.hunger = this.hunger + 1;

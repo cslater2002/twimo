@@ -21,5 +21,7 @@ public class Item : ScriptableObject{
              this.quantityOwned = this.quantityOwned - 1;
          }
      }
+
+     private void OnEnable() => hideFlags = HideFlags.DontUnloadUnusedAsset;
 }
 

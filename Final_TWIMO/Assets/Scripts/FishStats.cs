@@ -4,6 +4,9 @@ using UnityEngine;
 
 [CreateAssetMenu]
 public class FishStats : ScriptableObject{
+    
     public List<FishData> list = new List<FishData>();
     public int currentIndex;
+
+    private void OnEnable() => hideFlags = HideFlags.DontUnloadUnusedAsset;
 }

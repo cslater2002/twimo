@@ -10,6 +10,8 @@ public class Inventory : ScriptableObject
     public List<Item> shopSelection = new();
     public int maxItems = 5; 
     public int money;
+
+    private void OnEnable() => hideFlags = HideFlags.DontUnloadUnusedAsset;
 }
 
 

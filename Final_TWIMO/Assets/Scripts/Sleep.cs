@@ -10,10 +10,12 @@ public class Sleep : MonoBehaviour
     [SerializeField] Transform character;
     [SerializeField] bool sleeping = false;
     [SerializeField] int moneyEarned = 0;
+    [SerializeField] DialogueTrigger trigger;
     public FishStats stats;
     public Inventory inventory;
 
     public void OnTriggerEnter2D(Collider2D other){
+        trigger.TriggerDialogue();
         sleeping = true;
     }
 
@@ -31,6 +33,7 @@ public class Sleep : MonoBehaviour
             character.position = new Vector3(character.position.x + 1.5f, character.position.y, character.position.z);
             overlay.GetComponent<Image>().color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
             sleeping = false;
+            character.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
         }
         if(sleeping == true){
             overlay.GetComponent<Image>().color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, overlay.color.a + (1 * Time.deltaTime));

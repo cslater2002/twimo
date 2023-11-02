@@ -15,11 +15,11 @@ MonoBehaviour:
   items:
   - {fileID: 11400000, guid: 3901e6d2f9ac2674eaa832dfc1ab930f, type: 2}
   - {fileID: 11400000, guid: 3adff4eb140befb4e8b936c6425aa94c, type: 2}
-  maxItems: 10
-  money: 33
   shopSelection:
   - {fileID: 11400000, guid: 3901e6d2f9ac2674eaa832dfc1ab930f, type: 2}
   - {fileID: 11400000, guid: 3901e6d2f9ac2674eaa832dfc1ab930f, type: 2}
   - {fileID: 11400000, guid: 3901e6d2f9ac2674eaa832dfc1ab930f, type: 2}
   - {fileID: 11400000, guid: 3adff4eb140befb4e8b936c6425aa94c, type: 2}
   - {fileID: 11400000, guid: 3adff4eb140befb4e8b936c6425aa94c, type: 2}
+  maxItems: 10
+  money: 86

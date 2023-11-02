@@ -11,10 +11,13 @@ public class PauseController : MonoBehaviour
     [SerializeField] GameObject item1;
     [SerializeField] GameObject item2;
     [SerializeField] GameObject item3;
+    [SerializeField] Image optionsMenu;
+    [SerializeField] Slider musicSlider;
     public Inventory playerInventory;
 
     void Start(){
         canvas.enabled = false;
+        optionsMenu.gameObject.SetActive(false);
         if(inventory != null){        
             inventory.enabled = false;
         }
@@ -24,6 +27,7 @@ public class PauseController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Escape)){
             canvas.enabled = true;
+            optionsMenu.gameObject.SetActive(false);
         }
         else if(Input.GetKeyDown(KeyCode.T) && SceneManager.GetActiveScene().name != "FishWorld" && SceneManager.GetActiveScene().name != "FishRoom"){
             if(inventory.enabled == false){
@@ -57,5 +61,25 @@ public class PauseController : MonoBehaviour
     }
     public void PauseOff(){
         canvas.enabled = false;
+    }
+
+    public void OptionsMenuOn(){
+        optionsMenu.gameObject.SetActive(true);
+    }
+    public void OptionsMenuOff(){
+        optionsMenu.gameObject.SetActive(false);
+    }
+
+    public void SliderOnValueChanged(string slider){
+        if(slider == "music"){
+            //musicSlider.value;
+        }
+        if(slider == "sfx"){
+
+        }
+        if(slider == "ambient"){
+
+        }
+
     }
 }
