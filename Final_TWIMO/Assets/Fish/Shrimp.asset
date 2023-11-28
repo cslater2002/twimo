@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -16,3 +16,7 @@ MonoBehaviour:
   fishImage: {fileID: 21300000, guid: 02478ae271e771847a8cfe4dcf535748, type: 3}
   happiness: 6
   hunger: 6
+  color: {r: 0.9811321, g: 0.54980415, b: 0.7574806, a: 1}
+  level: 4
+  levelProgress: 5
+  health: 10

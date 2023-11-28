@@ -12,8 +12,10 @@ public class Sleep : MonoBehaviour
     [SerializeField] int moneyEarned = 0;
     [SerializeField] DialogueTrigger trigger;
     public FishStats stats;
+    [SerializeField] DayHandler d;
     public Inventory inventory;
 
+    
     public void OnTriggerEnter2D(Collider2D other){
         trigger.TriggerDialogue();
         sleeping = true;
@@ -32,6 +34,8 @@ public class Sleep : MonoBehaviour
             inventory.money += moneyEarned;
             character.position = new Vector3(character.position.x + 1.5f, character.position.y, character.position.z);
             overlay.GetComponent<Image>().color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
+            d.UpdateDay();  
+            inventory.setShopInventory(); 
             sleeping = false;
             character.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
         }

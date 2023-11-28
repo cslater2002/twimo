@@ -12,6 +12,19 @@ public class PauseController : MonoBehaviour
     [SerializeField] GameObject item1;
     [SerializeField] GameObject item2;
     [SerializeField] GameObject item3;
+    [SerializeField] GameObject item4;
+    [SerializeField] GameObject item5;
+    [SerializeField] GameObject item6;
+    [SerializeField] GameObject item7;
+    [SerializeField] GameObject item8;
+    [SerializeField] GameObject item9;
+    [SerializeField] GameObject item10;
+    [SerializeField] GameObject item11;
+    [SerializeField] GameObject item12;
+    [SerializeField] GameObject item13;
+    [SerializeField] GameObject item14;
+    [SerializeField] GameObject item15;
+    [SerializeField] GameObject item16;
     [SerializeField] Image optionsMenu;
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
@@ -37,7 +50,7 @@ public class PauseController : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.T) && SceneManager.GetActiveScene().name != "FishWorld" && SceneManager.GetActiveScene().name != "FishRoom"){
             if(inventory.enabled == false){
-                var items = new List<GameObject> {item1, item2, item3};
+                var items = new List<GameObject> {item1, item2, item3, item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16};
                 foreach(GameObject item in items){
                     item.active = true;
                 }
@@ -47,13 +60,14 @@ public class PauseController : MonoBehaviour
                 for(int i = 0; i < 16; i++){
                     if(itemCount < playerInventory.items.Count && playerInventory.items[itemCount].quantityOwned > 0){
                         items[i].GetComponent<SpriteRenderer>().sprite = playerInventory.items[itemCount].itemImage;
+                        items[i].GetComponentInChildren<Text>().text = playerInventory.items[itemCount].quantityOwned + "";
                         itemCount++;
                     }
                 }
                 inventory.enabled = true;
             }
             else{
-                var items = new List<GameObject> {item1, item2, item3};
+                var items = new List<GameObject> {item1, item2, item3, item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16};
                 foreach(GameObject item in items){
                     item.active = false;
                 }

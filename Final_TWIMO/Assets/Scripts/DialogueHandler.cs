@@ -81,7 +81,7 @@ public class DialogueHandler : MonoBehaviour
     }
 
     public void StartDialogue(Dialogue dialogue){
-        Debug.Log("start");
+        
         foreach(string sentence in dialogue.sentences){
             sentences.Enqueue(sentence);
         }
@@ -89,7 +89,7 @@ public class DialogueHandler : MonoBehaviour
     }
 
     public void DisplayNextSentence(string color){
-         Debug.Log("display");
+        
         string sentence = sentences.Dequeue();
         StartCoroutine(TypeSentence(sentence, color));
     }
@@ -109,7 +109,7 @@ public class DialogueHandler : MonoBehaviour
         textBoxes.ElementAt(index).Key.text="";
         foreach(char letter in sentence.ToCharArray()){
             scrollbar.value = 0;
-             Debug.Log("letter");
+             
             textBoxes.ElementAt(index).Key.text += "<color=#"+color+">"+letter+"</color>";
             yield return new WaitForSeconds(0.05f);
         }

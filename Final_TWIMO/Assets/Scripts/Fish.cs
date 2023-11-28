@@ -10,6 +10,7 @@ public class TakeItem : MonoBehaviour
     void Start()
     {
         index = stats.currentIndex;
-        GetComponent<SpriteRenderer>().sprite = stats.list[index].fishImage;           
+        GetComponent<SpriteRenderer>().sprite = stats.list[index].fishImage; 
+        GetComponent<SpriteRenderer>().color = stats.list[index].color;          
     }
 }

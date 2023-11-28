@@ -9,9 +9,10 @@ public class FishData : ScriptableObject{
     public Sprite fishImage;
     public int happiness;
     public int hunger;
-    //public Color color
-    //public int level;
-    //public int health;
+    public Color color;
+    public int level;
+    public int levelProgress;
+    public int health;
 
     private void OnEnable() => hideFlags = HideFlags.DontUnloadUnusedAsset;
 
