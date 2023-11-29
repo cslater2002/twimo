@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -16,5 +16,6 @@ MonoBehaviour:
   itemDesc: Yummy red apple
   itemImage: {fileID: 21300000, guid: d000efe8675ec36469a8a5479a32180f, type: 3}
   itemClass: food
-  quantityOwned: 4
+  quantityOwned: 3
   itemCost: 2
+  satiation: 1

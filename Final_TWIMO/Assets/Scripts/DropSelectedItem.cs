@@ -20,7 +20,7 @@ public class DropSelectedItem : MonoBehaviour
             foreach(Item item in inventory.items){
                 if(item.itemClass == "food" && item.quantityOwned > 0){
                     list.Add(item);
-                    stats.list[index].incrementHunger();
+                    stats.list[index].hunger += item.satiation;
                 }
             }
         }
@@ -28,7 +28,7 @@ public class DropSelectedItem : MonoBehaviour
             foreach(Item item in inventory.items){
                 if(item.itemClass == "gift" && item.quantityOwned > 0){
                     list.Add(item);
-                    stats.list[index].incrementHappiness();
+                    stats.list[index].happiness += item.satiation;
                 }
             }
         }

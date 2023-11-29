@@ -25,7 +25,7 @@ public class DayHandler : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(dayIndex.dayIndex);
+        
         DisplayDay();
     }
 

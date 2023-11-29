@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -16,5 +16,6 @@ MonoBehaviour:
   itemDesc: A heart with love in it
   itemImage: {fileID: 21300000, guid: 01f1df4349c733b4fab6a7a41b3183c9, type: 3}
   itemClass: gift
-  quantityOwned: 1
+  quantityOwned: 0
   itemCost: 2
+  satiation: 1

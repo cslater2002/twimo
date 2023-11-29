@@ -7,6 +7,10 @@ public class CameraMovement : MonoBehaviour
     public Transform target;
     public float smoothSpeed = 0.001f;
 
+    void Start(){
+        transform.position = target.position;
+    }
+
     void LateUpdate(){
         Follow();
     }

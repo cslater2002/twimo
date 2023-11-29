@@ -5,22 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuHandler : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSrc;
-
-    public void PlayGame(string sceneName){
-        audioSrc.time = 0.0080f;
-        audioSrc.Play();
+    [SerializeField] HoleSceneTransition hst;
+    public void PlayGame(){
         //add delay with scene transition
+        hst.ClosingTransition();
         if(RoomMusicHandler.singleton != null){
             RoomMusicHandler.singleton.GetComponent<AudioSource>().Play();
         }
-        SceneManager.LoadScene(sceneName);
+        Invoke("Go",1.5f);
     }
 
     public void QuitGame(){
-        audioSrc.time = 0.008f;
-        audioSrc.Play();
-        //add delay with scene transition
+        hst.ClosingTransition();
+        Invoke("Quit",1.5f);
+    }
+
+    public void Quit(){
         Application.Quit();
+    }
+    public void Go(){
+         SceneManager.LoadScene("Bedroom");
     }
 }

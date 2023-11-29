@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 public class Sleep : MonoBehaviour
 {
     
@@ -27,9 +27,20 @@ public class Sleep : MonoBehaviour
 
     void Update(){
         if(overlay.GetComponent<Image>().color.a > 2){
+            System.Random rand = new System.Random();
             foreach(FishData fish in stats.list){
-                moneyEarned += fish.happiness;
-                moneyEarned += fish.hunger;
+                moneyEarned += (fish.happiness * fish.level);
+                if(fish.happiness <= 5 || fish.hunger <= 5){
+                    fish.health -= rand.Next(1, 4);
+                    if(fish.health < 5){
+                        fish.happiness--;
+                    }
+                }
+                if(fish.happiness == 10 && fish.hunger == 10){
+                    fish.health++;
+                }
+                fish.happiness -= rand.Next(0,3);
+                fish.hunger -= rand.Next(1,4);
             }
             inventory.money += moneyEarned;
             character.position = new Vector3(character.position.x + 1.5f, character.position.y, character.position.z);

@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 public class SceneChange : MonoBehaviour
 {
     [SerializeField] string sceneName;
     public SetLocation setLocation;
     [SerializeField] AudioSource audioSrc;
+    [SerializeField] HoleSceneTransition hst;
+    public static string name;
     void OnTriggerEnter2D(Collider2D other){
+        hst.ClosingTransition();
+        name = sceneName;
         if(sceneName != "FishWorld"){
             audioSrc.time = 0.1f;
             audioSrc.Play();
@@ -25,10 +30,12 @@ public class SceneChange : MonoBehaviour
         if(sceneName == "Outside" && SceneManager.GetActiveScene().name == "Store"){
             RoomMusicHandler.singleton.GetComponent<AudioSource>().Play();
         }
-        SceneManager.LoadScene(sceneName);
+        Invoke("Go", 1.5f);
     }
 
     public void ChangeSceneOnClick(string sceneName){
+        hst.ClosingTransition();
+        name = sceneName;
         if(sceneName == "Bedroom"){
             TankMusicController.singleton.GetComponent<AudioSource>().Stop();
             AmbianceController.singleton.GetComponent<AudioSource>().Stop();
@@ -43,6 +50,10 @@ public class SceneChange : MonoBehaviour
         }
         
         setLocation.prevLocationName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(sceneName);
+        Invoke("Go", 1.5f);
+    }
+
+    public void Go(){
+        SceneManager.LoadScene(name);
     }
 }

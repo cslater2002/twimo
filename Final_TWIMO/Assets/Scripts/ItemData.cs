@@ -12,6 +12,7 @@ public class Item : ScriptableObject{
     public string itemClass;
     public int quantityOwned;
     public int itemCost;
+    public int satiation;
 
     public void incrementQuantity(){
          this.quantityOwned = this.quantityOwned + 1;
