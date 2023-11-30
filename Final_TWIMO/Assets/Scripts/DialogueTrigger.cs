@@ -8,5 +8,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue(){
         DialogueHandler.singleton.StartDialogue(dialogue);
+        dialogue.sentences.Clear();
     }
 }

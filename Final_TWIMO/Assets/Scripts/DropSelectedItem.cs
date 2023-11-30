@@ -13,11 +13,15 @@ public class DropSelectedItem : MonoBehaviour
     public FishStats stats;
     public int index;
     public Sprite image;
+    public DialogueTrigger trigger;
 
     public void DropItem(){
         index = stats.currentIndex;
         List<Item> items = new List<Item>();
         if(canvas.GetComponent<FillInventory>().buttonType == 1){
+            trigger.dialogue.sentences.Add("yummy");
+            trigger.dialogue.sentences.Add("i love to eat!!!");
+            trigger.TriggerDialogue();
             foreach(Item item in inventory.items){
                 if(item.itemClass == "food" && item.quantityOwned > 0){
                     items.Add(item);
@@ -25,6 +29,9 @@ public class DropSelectedItem : MonoBehaviour
             }
         }
         else if(canvas.GetComponent<FillInventory>().buttonType == 2){
+            trigger.dialogue.sentences.Add("for me?");
+            trigger.dialogue.sentences.Add("im so happy...");
+            trigger.TriggerDialogue();
             foreach(Item item in inventory.items){
                 if(item.itemClass == "gift" && item.quantityOwned > 0){
                     items.Add(item);

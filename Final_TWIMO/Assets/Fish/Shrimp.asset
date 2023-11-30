@@ -21,6 +21,7 @@ MonoBehaviour:
   levelProgress: 13
   health: -2
   isUnlocked: 1
+  cost: 15
   dialogue:
     sentences:
     - hello there

@@ -3515,6 +3515,7 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 64812ca5a81960246b59effc73dadf05, type: 2}
   index: 0
   image: {fileID: 0}
+  trigger: {fileID: 1968664078}
 --- !u!114 &986428240 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4365728712928303537, guid: 011076b3bdbf5a24ea22d4d43dc0215b, type: 3}

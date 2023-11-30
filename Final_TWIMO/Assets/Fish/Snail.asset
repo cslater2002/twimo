@@ -21,6 +21,7 @@ MonoBehaviour:
   levelProgress: 0
   health: 10
   isUnlocked: 0
+  cost: 30
   dialogue:
     sentences: []
     color: 258417

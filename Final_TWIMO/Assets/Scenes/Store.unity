@@ -221,10 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - welcome
-    - thank you for
-    - your purchase!
+    sentences: []
     color: FFC494
 --- !u!1 &69712304
 GameObject:
@@ -328,6 +325,71 @@ RectTransform:
   m_AnchoredPosition: {x: -28, y: -330}
   m_SizeDelta: {x: 250, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &100373571
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4119041153302383575, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119041153302383575, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.3494134
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168906885438905562, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630046754381128282, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
+      propertyPath: m_Name
+      value: BackgroundParticle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e2c3f231f89b644d82678c87d3867e0, type: 3}
 --- !u!1 &102414516
 GameObject:
   m_ObjectHideFlags: 0
@@ -5910,7 +5972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3, y: 407}
+  m_AnchoredPosition: {x: 3, y: 407.00003}
   m_SizeDelta: {x: 2000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693202181
@@ -8135,3 +8197,4 @@ SceneRoots:
   - {fileID: 2145354102}
   - {fileID: 1872502654}
   - {fileID: 1084033923}
+  - {fileID: 100373571}

@@ -121,7 +121,6 @@ public class DialogueHandler : MonoBehaviour
             textBoxes.ElementAt(index).Key.text += "<color=#"+color+">"+letter+"</color>";
             yield return new WaitForSeconds(0.05f);
         }
-        yield return new WaitForSeconds(5);
         DisplayNextSentence(color);
     }
 }
