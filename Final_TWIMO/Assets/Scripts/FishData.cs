@@ -13,6 +13,8 @@ public class FishData : ScriptableObject{
     public int level;
     public int levelProgress;
     public int health;
+    public int isUnlocked;
+    public Dialogue dialogue;
 
     private void OnEnable() => hideFlags = HideFlags.DontUnloadUnusedAsset;
 

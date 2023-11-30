@@ -16,8 +16,10 @@ public class Inventory : ScriptableObject
         shopSelection.Clear();
         var lowerBound = 0;
         var upperBound = items.Count;
-        for( int i = 0; i < maxItems; i++){
+       
+        for( int i = 0; i < 5; i++){
             var randomIndex = random.Next(lowerBound, upperBound);
+            
             shopSelection.Add(items[randomIndex]);
         }
     }

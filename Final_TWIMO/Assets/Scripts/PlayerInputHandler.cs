@@ -8,6 +8,7 @@ public class PlayerMovementHandler : MonoBehaviour
     [SerializeField] Movement movement;
     [SerializeField] Canvas canvas;
     public SetLocation setLocation;
+    [SerializeField] AnimationStateChanger asc;
 
     void Start(){
         if (setLocation.prevLocationName == "FishWorld" && SceneManager.GetActiveScene().name == "Bedroom"){
@@ -23,15 +24,19 @@ public class PlayerMovementHandler : MonoBehaviour
         Vector3 vel = Vector3.zero;
         if(canvas.enabled == false && SceneManager.GetActiveScene().name != "FishWorld" && SceneManager.GetActiveScene().name != "FishRoom"){
             if(Input.GetKey(KeyCode.A)){
+                asc.ChangeState("Walk1Flip");
                 vel.x = -1;
             }
             if(Input.GetKey(KeyCode.D)){
+                asc.ChangeState("Walk1");
                 vel.x = 1;
             }
             if(Input.GetKey(KeyCode.W)){
+                asc.ChangeState("Walk2");
                 vel.y = 1;
             }
             if(Input.GetKey(KeyCode.S)){
+                asc.ChangeState("Walk1");
                 vel.y = -1;
             }
             movement.MoveRB(vel);

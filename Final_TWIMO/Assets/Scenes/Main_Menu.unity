@@ -466,6 +466,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 638100261611415380, guid: d2588c25e4b0b3442962441de885dc8a, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 638100261611415380, guid: d2588c25e4b0b3442962441de885dc8a, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 166706127}
@@ -1329,6 +1333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hst: {fileID: 291169997}
+  mixer: {fileID: 24100000, guid: 77f22b1ec0886794186ea3ad1d5b3e41, type: 2}
 --- !u!1 &1786522582
 GameObject:
   m_ObjectHideFlags: 0

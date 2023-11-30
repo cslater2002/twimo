@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45a0fbc612f61b949b3b5bdd829bd424, type: 3}
-  m_Name: Test
+  m_Script: {fileID: 11500000, guid: d1b2423742646754488af9d51cc666be, type: 3}
+  m_Name: Leaf
   m_EditorClassIdentifier: 
-  fishName: Mystery
-  fishImage: {fileID: 21300000, guid: ebed7570dd248db4694dc151a6675843, type: 3}
-  happiness: 10
-  hunger: 9
-  color: {r: 0.7732582, g: 0, b: 1, a: 1}
-  level: 1
-  health: 2
+  itemName: Leaf
+  itemDesc: A leaf plucked from a tree
+  itemImage: {fileID: 21300000, guid: 6519213b9ce25bf4a8107233dc75a706, type: 3}
+  itemClass: food
+  quantityOwned: 1
+  itemCost: 1
+  satiation: 1

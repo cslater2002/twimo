@@ -12,23 +12,22 @@ public class DropSelectedItem : MonoBehaviour
     public Inventory inventory;
     public FishStats stats;
     public int index;
-    
+    public Sprite image;
+
     public void DropItem(){
         index = stats.currentIndex;
-        List<Item> list = new List<Item>();
+        List<Item> items = new List<Item>();
         if(canvas.GetComponent<FillInventory>().buttonType == 1){
             foreach(Item item in inventory.items){
                 if(item.itemClass == "food" && item.quantityOwned > 0){
-                    list.Add(item);
-                    stats.list[index].hunger += item.satiation;
+                    items.Add(item);
                 }
             }
         }
         else if(canvas.GetComponent<FillInventory>().buttonType == 2){
             foreach(Item item in inventory.items){
                 if(item.itemClass == "gift" && item.quantityOwned > 0){
-                    list.Add(item);
-                    stats.list[index].happiness += item.satiation;
+                    items.Add(item);
                 }
             }
         }
@@ -37,24 +36,54 @@ public class DropSelectedItem : MonoBehaviour
         giftButton.enabled = false;
 
         if((int) transform.localPosition.x == -757){
-                prefab.GetComponent<SpriteRenderer>().sprite = list[0].itemImage;
-                list[0].decrementQuantity();
+                prefab.GetComponent<SpriteRenderer>().sprite = items[0].itemImage;
+                items[0].decrementQuantity();
+                if(canvas.GetComponent<FillInventory>().buttonType == 1){
+                    stats.list[index].hunger += items[0].satiation;
+                }
+                else{
+                    stats.list[index].happiness += items[0].satiation;
+                }
         }
-        else if((int) transform.localPosition.x == -406){
-                prefab.GetComponent<SpriteRenderer>().sprite = list[1].itemImage;
-                list[1].decrementQuantity();
+        else if((int) transform.localPosition.x == -407){
+                prefab.GetComponent<SpriteRenderer>().sprite = items[1].itemImage;
+                items[1].decrementQuantity();
+                if(canvas.GetComponent<FillInventory>().buttonType == 1){
+                    stats.list[index].hunger += items[1].satiation;
+                }
+                else{
+                    stats.list[index].happiness += items[1].satiation;
+                }
         }
-        else if((int) transform.localPosition.x == -55){
-                prefab.GetComponent<SpriteRenderer>().sprite = list[2].itemImage;
-                list[2].decrementQuantity();
+        else if((int) transform.localPosition.x == -58){
+                prefab.GetComponent<SpriteRenderer>().sprite = items[2].itemImage;
+                items[2].decrementQuantity();
+                if(canvas.GetComponent<FillInventory>().buttonType == 1){
+                    stats.list[index].hunger += items[2].satiation;
+                }
+                else{
+                    stats.list[index].happiness += items[2].satiation;
+                }
         }
-        else if((int) transform.localPosition.x == 295){
-                prefab.GetComponent<SpriteRenderer>().sprite = list[3].itemImage;
-                list[3].decrementQuantity();
+        else if((int) transform.localPosition.x == 291){
+                prefab.GetComponent<SpriteRenderer>().sprite = items[3].itemImage;
+                items[3].decrementQuantity();
+                if(canvas.GetComponent<FillInventory>().buttonType == 1){
+                    stats.list[index].hunger += items[3].satiation;
+                }
+                else{
+                    stats.list[index].happiness += items[3].satiation;
+                }
         }
-        else if((int) transform.localPosition.x == 646){
-                prefab.GetComponent<SpriteRenderer>().sprite = list[4].itemImage;
-                list[4].decrementQuantity();
+        else if((int) transform.localPosition.x == 640){
+                prefab.GetComponent<SpriteRenderer>().sprite = items[4].itemImage;
+                items[4].decrementQuantity();
+                if(canvas.GetComponent<FillInventory>().buttonType == 1){
+                    stats.list[index].hunger += items[4].satiation;
+                }
+                else{
+                    stats.list[index].happiness += items[4].satiation;
+                }
         }
         Instantiate(prefab, new Vector3(prefab.GetComponent<Transform>().localPosition.x, prefab.GetComponent<Transform>().localPosition.y, prefab.GetComponent<Transform>().localPosition.z), Quaternion.identity);
         foodButton.enabled = true;

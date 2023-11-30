@@ -11,6 +11,7 @@ public class FillShop : MonoBehaviour
     [SerializeField] GameObject item4;
     [SerializeField] GameObject item5;
     public Inventory inventory;
+    [SerializeField] DialogueTrigger trigger;
     
     void Start()
     {

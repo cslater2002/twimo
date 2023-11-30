@@ -33,7 +33,12 @@ public class PauseController : MonoBehaviour
     public Inventory playerInventory;
 
     void Start(){
-        //musicSlider.value = 
+        mixer.SetFloat("Music", Mathf.Log10(PlayerPrefs.GetFloat("musicvolume")) * 20);
+        mixer.SetFloat("SFX", Mathf.Log10(PlayerPrefs.GetFloat("sfxvolume")) * 20);
+        mixer.SetFloat("Ambient", Mathf.Log10(PlayerPrefs.GetFloat("ambientvolume")) * 20);
+        musicSlider.value = PlayerPrefs.GetFloat("musicvolume");
+        sfxSlider.value = PlayerPrefs.GetFloat("sfxvolume");
+        ambienceSlider.value =  PlayerPrefs.GetFloat("ambientvolume");
         canvas.enabled = false;
         optionsMenu.gameObject.SetActive(false);
         if(inventory != null){        
@@ -56,12 +61,15 @@ public class PauseController : MonoBehaviour
                 }
                 moneyLabel.text = "$";
                 moneyLabel.text += playerInventory.money;
-                int itemCount = 0;
-                for(int i = 0; i < 16; i++){
-                    if(itemCount < playerInventory.items.Count && playerInventory.items[itemCount].quantityOwned > 0){
-                        items[i].GetComponent<SpriteRenderer>().sprite = playerInventory.items[itemCount].itemImage;
-                        items[i].GetComponentInChildren<Text>().text = playerInventory.items[itemCount].quantityOwned + "";
-                        itemCount++;
+                int filledSlotsCount = 0;
+                for(int i = 0; i < playerInventory.items.Count; i++){
+                    if(filledSlotsCount >= 16){
+                        break;
+                    }
+                    if(playerInventory.items[i].quantityOwned > 0){
+                        items[filledSlotsCount].GetComponent<SpriteRenderer>().sprite = playerInventory.items[i].itemImage;
+                        items[filledSlotsCount].GetComponentInChildren<Text>().text = playerInventory.items[i].quantityOwned + "";
+                        filledSlotsCount++;
                     }
                 }
                 inventory.enabled = true;
@@ -101,5 +109,11 @@ public class PauseController : MonoBehaviour
             mixer.SetFloat("Ambient", Mathf.Log10(ambienceSlider.value) * 20);
         }
 
+    }
+    public void SaveVolume(){
+        PlayerPrefs.SetFloat("musicvolume", musicSlider.value);
+        PlayerPrefs.SetFloat("sfxvolume", sfxSlider.value);
+        PlayerPrefs.SetFloat("ambientvolume", ambienceSlider.value);
+        PlayerPrefs.Save();
     }
 }

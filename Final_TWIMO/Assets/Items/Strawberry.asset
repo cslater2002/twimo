@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 32
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b2423742646754488af9d51cc666be, type: 3}
+  m_Name: Strawberry
+  m_EditorClassIdentifier: 
+  itemName: Strawberry
+  itemDesc: Juicy fresh strawberry
+  itemImage: {fileID: 21300000, guid: ae4135c8989cdee48ba367681b0fa076, type: 3}
+  itemClass: food
+  quantityOwned: 2
+  itemCost: 6
+  satiation: 5

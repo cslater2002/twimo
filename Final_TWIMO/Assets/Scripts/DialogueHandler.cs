@@ -89,32 +89,39 @@ public class DialogueHandler : MonoBehaviour
     }
 
     public void DisplayNextSentence(string color){
-        
+        if(sentences.Count == 0){
+            return;
+        }
         string sentence = sentences.Dequeue();
         StartCoroutine(TypeSentence(sentence, color));
     }
     IEnumerator TypeSentence(string sentence, string color){
-        if(currentIndex >= 26){
+        if(currentIndex >= 26){ // if all the text fields are full use field 0
             currentIndex = 0;
         }
+        // this is so  if there is another dialogue triggered before this one
+        // is finished typing it can go in the next box instead of in this one
         int index = currentIndex;
-        currentIndex++;
+        currentIndex++; 
+
+        // 0 = is empty, needs to be activated
+        // 1 = has already been used, must be set as last sibling
         if(textBoxes[textBoxes.ElementAt(index).Key] == 0){
             textBoxes.ElementAt(index).Key.gameObject.SetActive(true);
-            textBoxes[textBoxes.ElementAt(index).Key]=1;
+            textBoxes[textBoxes.ElementAt(index).Key] = 1;
         }
         else{
             textBoxes.ElementAt(index).Key.transform.SetAsLastSibling();
         }
-        textBoxes.ElementAt(index).Key.text="";
+        textBoxes.ElementAt(index).Key.text = "";
+
+        //entering letter by letter gives a typewriter effect
         foreach(char letter in sentence.ToCharArray()){
-            scrollbar.value = 0;
-             
+            scrollbar.value = 0; //otherwise the scrollbar keeps going up
             textBoxes.ElementAt(index).Key.text += "<color=#"+color+">"+letter+"</color>";
             yield return new WaitForSeconds(0.05f);
         }
-    }
-    void EndDialogue(){
-        //Debug.Log("done");
+        yield return new WaitForSeconds(5);
+        DisplayNextSentence(color);
     }
 }

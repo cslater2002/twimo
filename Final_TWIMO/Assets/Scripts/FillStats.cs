@@ -22,7 +22,8 @@ public class FillStats : MonoBehaviour
         happyLevel.GetComponent<RectTransform>().sizeDelta = new Vector2(stats.list[index].happiness * step, height);
         hungerLevel.GetComponent<RectTransform>().sizeDelta = new Vector2(stats.list[index].hunger * step, height);  
         healthLevel.GetComponent<RectTransform>().sizeDelta = new Vector2(stats.list[index].health * step, height); 
-        level.GetComponent<RectTransform>().sizeDelta = new Vector2(stats.list[index].levelProgress * lstep, lheight);
+        float levelRatio = (float) stats.list[index].levelProgress / (10 * stats.list[index].level);
+        level.GetComponent<RectTransform>().sizeDelta = new Vector2(820 * levelRatio, 105);
         nameLabel.text = stats.list[index].fishName;
         levelLabel.text = "level " + stats.list[index].level;
         nameLabel.color = stats.list[index].color;

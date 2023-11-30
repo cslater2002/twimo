@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: Shrimp
   fishImage: {fileID: 21300000, guid: 02478ae271e771847a8cfe4dcf535748, type: 3}
-  happiness: 6
-  hunger: 6
+  happiness: 3
+  hunger: 2
   color: {r: 0.9811321, g: 0.54980415, b: 0.7574806, a: 1}
-  level: 4
-  levelProgress: 5
-  health: 10
+  level: 5
+  levelProgress: 13
+  health: -2
+  isUnlocked: 1
+  dialogue:
+    sentences:
+    - hello there
+    - how are you
+    color: FA8CC1

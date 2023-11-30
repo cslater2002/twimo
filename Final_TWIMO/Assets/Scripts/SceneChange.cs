@@ -8,16 +8,16 @@ public class SceneChange : MonoBehaviour
     [SerializeField] string sceneName;
     public SetLocation setLocation;
     [SerializeField] AudioSource audioSrc;
+    [SerializeField] Animator doorAnimation;
     [SerializeField] HoleSceneTransition hst;
     public static string name;
     void OnTriggerEnter2D(Collider2D other){
         hst.ClosingTransition();
         name = sceneName;
         if(sceneName != "FishWorld"){
-            audioSrc.time = 0.1f;
+            audioSrc.time = 0.3f;
             audioSrc.Play();
-            //play door open animation
-            //scene transition
+            doorAnimation.Play("DoorOpen");
         }
         setLocation.prevLocationName = SceneManager.GetActiveScene().name;
         if(sceneName == "FishWorld" && TankMusicController.singleton != null){

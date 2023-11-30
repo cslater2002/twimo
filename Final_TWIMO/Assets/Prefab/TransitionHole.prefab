@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hole: {fileID: 5893582771068190491}
   target: {fileID: 0}
-  speed: 5
+  speed: 30
 --- !u!1 &8452080951689720443
 GameObject:
   m_ObjectHideFlags: 0

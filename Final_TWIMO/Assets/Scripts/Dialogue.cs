@@ -5,6 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue{
     [TextArea]
-    public string[] sentences;
+    public List<string> sentences = new List<string>();
     public string color;
 }
