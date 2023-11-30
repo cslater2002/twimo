@@ -23,6 +23,11 @@ public class Inventory : ScriptableObject
             shopSelection.Add(items[randomIndex]);
         }
     }
+    public void checkAfterDecrease(){
+        if(this.money < 0){
+            this.money = 0;
+        }
+    }
     private void OnEnable() => hideFlags = HideFlags.DontUnloadUnusedAsset;
 }
 

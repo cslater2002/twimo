@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: 
   itemName: Apple
+  id: 0
   itemDesc: Yummy red apple
   itemImage: {fileID: 21300000, guid: d000efe8675ec36469a8a5479a32180f, type: 3}
   itemClass: food
-  quantityOwned: 1
+  quantityOwned: 0
   itemCost: 2
   satiation: 1

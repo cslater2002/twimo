@@ -1334,6 +1334,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hst: {fileID: 291169997}
   mixer: {fileID: 24100000, guid: 77f22b1ec0886794186ea3ad1d5b3e41, type: 2}
+  inventory: {fileID: 11400000, guid: 0b83ddadddd26ed48995e71501d8dcd0, type: 2}
+  stats: {fileID: 11400000, guid: 64812ca5a81960246b59effc73dadf05, type: 2}
+  day: {fileID: 11400000, guid: d17d88116de8dfb4c8075f69c54ba2e6, type: 2}
 --- !u!1 &1786522582
 GameObject:
   m_ObjectHideFlags: 0

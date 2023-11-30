@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Magazine
   m_EditorClassIdentifier: 
   itemName: Magazine
+  id: 4
   itemDesc: Trendy fashion magazine
   itemImage: {fileID: 21300000, guid: 753a6a1686ba1be468c655fd7129d3f0, type: 3}
   itemClass: gift
-  quantityOwned: 1
+  quantityOwned: 0
   itemCost: 5
   satiation: 3

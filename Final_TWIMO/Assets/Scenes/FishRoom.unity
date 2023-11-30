@@ -8815,7 +8815,7 @@ PrefabInstance:
       objectReference: {fileID: 2080639257}
     - target: {fileID: 3963508475613478791, guid: 0231dfa46e50ecb418faaa8196170466, type: 3}
       propertyPath: m_SortingOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4666891664724889443, guid: 0231dfa46e50ecb418faaa8196170466, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

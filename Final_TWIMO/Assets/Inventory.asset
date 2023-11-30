@@ -21,15 +21,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b39bb4d732e7e6c408cba6c5cfa30254, type: 2}
   - {fileID: 11400000, guid: 3b3ed0e3dad39d94a9a96a56a9e64838, type: 2}
   shopSelection:
+  - {fileID: 11400000, guid: 886399c175deb9246ac0eb8b91a9a40c, type: 2}
+  - {fileID: 11400000, guid: 3b3ed0e3dad39d94a9a96a56a9e64838, type: 2}
   - {fileID: 11400000, guid: 3901e6d2f9ac2674eaa832dfc1ab930f, type: 2}
-  - {fileID: 11400000, guid: c7b7ee9c4ee7a324c99865547e1a3bda, type: 2}
-  - {fileID: 11400000, guid: 8a6e01938265e0e42b55a6c948d9888a, type: 2}
-  - {fileID: 11400000, guid: c7b7ee9c4ee7a324c99865547e1a3bda, type: 2}
   - {fileID: 11400000, guid: b39bb4d732e7e6c408cba6c5cfa30254, type: 2}
-  - {fileID: 11400000, guid: 3adff4eb140befb4e8b936c6425aa94c, type: 2}
-  - {fileID: 11400000, guid: 3adff4eb140befb4e8b936c6425aa94c, type: 2}
-  - {fileID: 11400000, guid: 3adff4eb140befb4e8b936c6425aa94c, type: 2}
   - {fileID: 11400000, guid: c7b7ee9c4ee7a324c99865547e1a3bda, type: 2}
-  - {fileID: 11400000, guid: 3901e6d2f9ac2674eaa832dfc1ab930f, type: 2}
-  maxItems: 10
-  money: 211
+  maxItems: 5
+  money: 32

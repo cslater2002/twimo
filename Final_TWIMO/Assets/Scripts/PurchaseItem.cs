@@ -22,7 +22,7 @@ public class PurchaseItem : MonoBehaviour
                 return;
             }
            inventory.shopSelection[0].incrementQuantity();
-           inventory.money -= inventory.shopSelection[0].itemCost;
+           inventory.money -=  inventory.shopSelection[0].itemCost;
            trigger.dialogue.sentences.Add("thanks");
            trigger.TriggerDialogue();
         }
@@ -46,7 +46,7 @@ public class PurchaseItem : MonoBehaviour
                 return;
             }
             inventory.shopSelection[2].incrementQuantity();
-           inventory.money -= inventory.shopSelection[2].itemCost;
+           inventory.money -=  inventory.shopSelection[2].itemCost;
            trigger.dialogue.sentences.Add("thanks");
            trigger.TriggerDialogue();
         }
@@ -58,7 +58,7 @@ public class PurchaseItem : MonoBehaviour
                 return;
             }
             inventory.shopSelection[3].incrementQuantity();
-           inventory.money -= inventory.shopSelection[3].itemCost;
+           inventory.money -=  inventory.shopSelection[3].itemCost;
            trigger.dialogue.sentences.Add("thanks");
            trigger.TriggerDialogue();
         }
@@ -74,5 +74,6 @@ public class PurchaseItem : MonoBehaviour
            trigger.dialogue.sentences.Add("thanks");
            trigger.TriggerDialogue();
         }
+        inventory.checkAfterDecrease();
     }
 }

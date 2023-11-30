@@ -19,6 +19,29 @@ public class FishData : ScriptableObject{
 
     private void OnEnable() => hideFlags = HideFlags.DontUnloadUnusedAsset;
 
+
+    public void checkAfterDecrease(){
+        if(this.hunger < 0){
+            this.hunger = 0;
+        }
+        if(this.happiness < 0){
+            this.happiness = 0;
+        }
+        if(this.health < 0){
+            this.health = 0;
+        }
+    }
+    public void checkAfterIncrease(){
+        if(this.hunger > 10){
+            this.hunger = 10;
+        }
+        if(this.happiness > 10){
+            this.happiness = 10;
+        }
+        if(this.health > 10){
+            this.health = 10;
+        }
+    }
     public void incrementHunger(){
         if(this.hunger < 10){
             this.hunger = this.hunger + 1;

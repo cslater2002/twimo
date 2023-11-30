@@ -25,7 +25,6 @@ public class DayHandler : MonoBehaviour
 
     void Start()
     {
-        
         DisplayDay();
     }
 
@@ -37,6 +36,10 @@ public class DayHandler : MonoBehaviour
         if(dayIndex.dayIndex >= 5){
             dayIndex.dayIndex = 0;
         }
+         DisplayDay();
+    }
+    public void UpdateDay(int newIndex){
+        dayIndex.dayIndex = newIndex;
          DisplayDay();
     }
 }

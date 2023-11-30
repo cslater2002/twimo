@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public Transform target;
-    public float smoothSpeed = 0.001f;
+    public float smoothSpeed = 0.09f;
 
     void Start(){
         transform.position = target.position;

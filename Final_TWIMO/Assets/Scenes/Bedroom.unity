@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1577897862}
-  smoothSpeed: 0.001
+  smoothSpeed: 0.09
 --- !u!114 &574902471 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3582469997858752273, guid: 011076b3bdbf5a24ea22d4d43dc0215b, type: 3}

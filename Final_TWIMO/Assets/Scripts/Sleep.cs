@@ -15,7 +15,7 @@ public class Sleep : MonoBehaviour
     [SerializeField] DayHandler d;
     public Inventory inventory;
 
-    
+
     public void OnTriggerEnter2D(Collider2D other){
         trigger.TriggerDialogue();
         sleeping = true;
@@ -27,6 +27,7 @@ public class Sleep : MonoBehaviour
 
     void Update(){
         if(overlay.GetComponent<Image>().color.a > 2){
+            stats.unlockedToday = false;
             System.Random rand = new System.Random();
             foreach(FishData fish in stats.list){
                 if(fish.isUnlocked == 1){
@@ -47,6 +48,7 @@ public class Sleep : MonoBehaviour
                     }
                     fish.happiness -= rand.Next(0,3);
                     fish.hunger -= rand.Next(1,4);
+                    fish.checkAfterDecrease();
                 }
             }
             inventory.money += moneyEarned;
@@ -55,10 +57,12 @@ public class Sleep : MonoBehaviour
             d.UpdateDay();  
             if(d.dayIndex.dayIndex == 4){
                 inventory.money -= 100;
+                inventory.checkAfterDecrease();
             }
             inventory.setShopInventory(); 
             sleeping = false;
             character.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
+            SaveGame();
         }
         if(sleeping == true){
             overlay.GetComponent<Image>().color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, overlay.color.a + (1 * Time.deltaTime));
@@ -67,5 +71,31 @@ public class Sleep : MonoBehaviour
             overlay.GetComponent<Image>().color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, overlay.color.a - (1 * Time.deltaTime));
         }
 
+    }
+
+    public void SaveGame(){
+        //save money
+        PlayerPrefs.SetInt("money", (int) inventory.money);
+        //save day index
+        PlayerPrefs.SetInt("day", d.dayIndex.dayIndex);
+        // save each items quantity owned
+        string quant="";
+        foreach(Item item in inventory.items){
+            quant += item.quantityOwned + "," ;
+        }
+        PlayerPrefs.SetString("quantities", quant);
+        // save each fishes :happiness, hunger, level, health, levelProgress, isUnlocked
+        string fishstats = "";
+        foreach(FishData fish in stats.list){
+            fishstats += fish.happiness + "-" + fish.hunger + "-" + fish.level + "-" + fish.levelProgress + "-" + fish.health + "-" + fish.isUnlocked + ",";
+        }
+        PlayerPrefs.SetString("fishstats", fishstats);
+        // save shop selection
+        string shopinv = "";
+        foreach(Item item in inventory.shopSelection){
+            shopinv+= item.id + ",";
+        }
+        PlayerPrefs.SetString("shopinv",shopinv);
+        PlayerPrefs.Save();
     }
 }

@@ -12,8 +12,7 @@ public class TakeItem : MonoBehaviour
         index = stats.currentIndex;
         GetComponent<SpriteRenderer>().sprite = stats.list[index].fishImage; 
         GetComponent<SpriteRenderer>().color = stats.list[index].color;    
-        trigger.dialogue = stats.list[index].dialogue;
-        trigger.TriggerDialogue();
+        trigger.dialogue.color = ColorUtility.ToHtmlStringRGBA( stats.list[index].color );
     }
 
     

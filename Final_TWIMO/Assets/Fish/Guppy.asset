@@ -17,7 +17,7 @@ MonoBehaviour:
   happiness: 3
   hunger: 3
   color: {r: 0.43723744, g: 0.49684662, b: 0.8679245, a: 1}
-  level: 0
+  level: 1
   levelProgress: 0
   health: 10
   isUnlocked: 0

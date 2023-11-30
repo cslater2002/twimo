@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Strawberry
   m_EditorClassIdentifier: 
   itemName: Strawberry
+  id: 5
   itemDesc: Juicy fresh strawberry
   itemImage: {fileID: 21300000, guid: ae4135c8989cdee48ba367681b0fa076, type: 3}
   itemClass: food
-  quantityOwned: 2
+  quantityOwned: 0
   itemCost: 6
   satiation: 5

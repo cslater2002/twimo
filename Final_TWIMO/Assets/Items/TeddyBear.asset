@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: TeddyBear
   m_EditorClassIdentifier: 
   itemName: Teddy Bear
+  id: 6
   itemDesc: Fluffy companion
   itemImage: {fileID: 21300000, guid: 5b2644af8afac2140961ea429c5832f2, type: 3}
   itemClass: gift
-  quantityOwned: 1
+  quantityOwned: 0
   itemCost: 10
   satiation: 5
